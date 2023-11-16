@@ -1,5 +1,6 @@
 package com.levelup.forestsandmonsters.cli;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.Test;
@@ -18,7 +19,10 @@ public class PositionTest {
 
     // }
 
-    // @Test
-    // public void 
+    @Test
+    public void invalidXCoordinates() {
+        Position position = new Position(10, 0);
+        assertFalse(position.isValid());
+    }
 
 }
