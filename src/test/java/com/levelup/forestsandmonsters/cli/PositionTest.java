@@ -20,9 +20,28 @@ public class PositionTest {
     // }
 
     @Test
-    public void invalidXCoordinates() {
+    public void xCoordinatesOver9() {
         Position position = new Position(10, 0);
         assertFalse(position.isValid());
     }
-
+    @Test
+    public void negativeXCoordinates() {
+        Position position = new Position(-33, 9);
+        assertFalse(position.isValid());
+    }
+    @Test
+    public void yCoordinatesOver9() {
+        Position position = new Position(8, 11);
+        assertFalse(position.isValid());
+    }
+    @Test
+    public void negativeYCoordinates() {
+        Position position = new Position(1, -6);
+        assertFalse(position.isValid());
+    }
+    @Test
+    public void invalidXAndYCoordinates() {
+        Position position = new Position(-123, 33);
+        assertFalse(position.isValid());
+    }
 }
