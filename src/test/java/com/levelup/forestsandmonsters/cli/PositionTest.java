@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.Test;
 
-import com.levelup.forestsandmonsters.GameController;
+import com.levelup.forestsandmonsters.cli.Position;
 
 public class PositionTest {
     @Test
@@ -12,4 +12,13 @@ public class PositionTest {
         Position position = new Position(0,0);
         assertNotNull(position.getPosition());
     }
+
+    // @Test
+    // public void setPosition() {
+
+    // }
+
+    // @Test
+    // public void 
+
 }
