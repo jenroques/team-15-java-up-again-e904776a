@@ -3,15 +3,8 @@ package com.levelup.forestsandmonsters.cli;
 import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.Assert.*;
-
 import java.awt.Point;
-
-import org.junit.Assert;
 import org.junit.Test;
-
-import com.levelup.forestsandmonsters.cli.Position;
 
 public class PositionTest {
     @Test
