@@ -8,6 +8,7 @@ public class Position {
     int xCoordinates, yCoordinates;
 
     // Adding a contructor 
+    Position(){}
     Position(int xCoordinates, int yCoordinates){
         this.xCoordinates = xCoordinates;
         this.yCoordinates = yCoordinates;
@@ -16,6 +17,11 @@ public class Position {
 
     public Point getPosition() {
         return coordinates;
+    }
+
+    public void setCharacterPosition(int xCoordinates, int yCoordinates) {
+        this.xCoordinates = xCoordinates;
+        this.yCoordinates = yCoordinates;
     }
 
     public boolean isValid() {

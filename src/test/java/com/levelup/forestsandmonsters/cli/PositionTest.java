@@ -1,8 +1,14 @@
 package com.levelup.forestsandmonsters.cli;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.*;
 
+import java.awt.Point;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.levelup.forestsandmonsters.cli.Position;
@@ -14,10 +20,15 @@ public class PositionTest {
         assertNotNull(position.getPosition());
     }
 
-    // @Test
-    // public void setPosition() {
+    @Test
+    public void positionSetterTest() {
+        Position position = new Position();
+        position.setCharacterPosition(5,5);
 
-    // }
+        Point coordinates = new Point(5,5);
+        assertEquals(position.xCoordinates,coordinates.x);
+        assertEquals(position.yCoordinates,coordinates.y);
+    }
 
     @Test
     public void xCoordinatesOver9() {
