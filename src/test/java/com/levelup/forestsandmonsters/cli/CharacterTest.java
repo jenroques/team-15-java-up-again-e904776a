@@ -22,4 +22,18 @@ public class CharacterTest {
         assertEquals(expectedName, actualName);
         
     }
+
+     @Test
+    public void characterClassGetNameFunctionReturnsName() {
+        Character character = new Character("Jenny");
+        String actualName = character.getCharacterName();
+        String expectedName = "Jenny";
+        assertEquals(expectedName, actualName);
+
+        Character character2 = new Character();
+        String actualName2 = character2.getCharacterName();
+        String expectedName2 = "Thor";
+        assertEquals(expectedName2, actualName2);
+        
+    }
 }

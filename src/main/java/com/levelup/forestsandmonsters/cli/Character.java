@@ -12,5 +12,12 @@ public class Character {
     public Character() {
         this.characterName = DEFAULT_NAME;
     }
+
+    public String getCharacterName() {
+        return this.characterName;
+    }
+
+
+    
    
 }
