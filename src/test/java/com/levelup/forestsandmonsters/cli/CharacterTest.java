@@ -9,8 +9,17 @@ public class CharacterTest {
     @Test
     public void characterHasName() {
         Character character = new Character("Karen");
-        String actual = character.characterName;
-        String expected = "Karen";
-        assertEquals(expected, actual);
+        String actualName = character.characterName;
+        String expectedName = "Karen";
+        assertEquals(expectedName, actualName);
+    }
+
+    @Test
+    public void characterHasDefaultNameWhenNoNameIsGiven() {
+        Character character = new Character();
+        String actualName = character.characterName;
+        String expectedName = "Thor";
+        assertEquals(expectedName, actualName);
+        
     }
 }
