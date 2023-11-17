@@ -46,5 +46,8 @@ public class GameMap {
         return newPosition.isValid() ? newPosition : startingPosition;   
     }
 
+    public int getTotalPositions() {
+        return this.numPositions;
+    }
 
 }
