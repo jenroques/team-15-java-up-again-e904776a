@@ -28,7 +28,7 @@ public class ExitGameSteps {
     public void displayGameStats(String characterName, int startingPositionX, int startingPositionY, int endingPositionX, int endingPositionY, int moveCount) {
         gc = new GameController();
         assertEquals(startingPositionX, coordinates.x);
-        assertEquals(startingPositionX, coordinates.y);
+        assertEquals(startingPositionY, coordinates.y);
         gc.move(DIRECTION.NORTH);
         assertEquals(endingPositionX, gc.getStatus().currentPosition.x);
         assertEquals(endingPositionY, gc.getStatus().currentPosition.y);
