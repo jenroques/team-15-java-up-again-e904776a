@@ -20,8 +20,24 @@ public class GameMap {
         int x = startingPosition.xCoordinates;
         int y = startingPosition.yCoordinates;
 
-        if(direction.equals(DIRECTION.NORTH)) {
-            startingPosition.setCharacterPosition(x, y + 1);
+        // if(direction == DIRECTION.NORTH) {
+        //     startingPosition.setCharacterPosition(x, y + 1);
+        // }
+        switch (direction) {
+            case NORTH:
+                startingPosition.setCharacterPosition(x, y + 1);
+                break;
+            case SOUTH:
+                startingPosition.setCharacterPosition(x, y - 1);
+                break;
+            case WEST:
+                startingPosition.setCharacterPosition(x - 1, y);
+                break;
+            case EAST:
+                startingPosition.setCharacterPosition(x + 1, y);
+                break;
+            default:
+                break;
         }
         
 
