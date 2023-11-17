@@ -112,6 +112,16 @@ public class GameMapTest {
         assertFalse(expectedCalculatedPosition.isValid());
     }
 
+    @Test 
+    public void getTotalPositions() {
+        GameMap gameMap = new GameMap();
+
+        int expectedTotalPositions = 100;
+        int actualTotalPositions = gameMap.getTotalPositions();
+
+        assertEquals(expectedTotalPositions, actualTotalPositions);
+    }
+
 
 }
 
