@@ -1,5 +1,7 @@
 package com.levelup.forestsandmonsters.cli;
 
+import java.awt.Point;
+
 public class Character {
 
     public String characterName;
@@ -17,7 +19,12 @@ public class Character {
         return this.characterName;
     }
 
+    public int getMoveCount() {
+        return 0;
+    }
 
-    
+    public Point getPosition() {
+        return null;
+    }
    
 }
