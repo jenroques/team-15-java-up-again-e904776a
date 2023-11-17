@@ -4,7 +4,7 @@ import java.awt.Point;
 
 public class Position {
     // decalred an attribute 
-    Point coordinates;
+    Point coordinates = new Point(0,0);
     int xCoordinates, yCoordinates;
 
     // Adding a contructor 
