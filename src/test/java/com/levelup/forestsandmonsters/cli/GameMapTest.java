@@ -93,18 +93,18 @@ public class GameMapTest {
        
         validPosition.isValid();
 
-       assertTrue(true); 
+       assertTrue(validPosition.isValid()); 
     }
 
     @Test
-    public void positionIsNoValid() {
+    public void positionIsNotValid() {
 
         Position invalidPosition = new Position();
         invalidPosition.setCharacterPosition(11, 10);
 
         invalidPosition.isValid();
 
-        assertFalse(false);
+        assertFalse(invalidPosition.isValid());
     }
 }
 
