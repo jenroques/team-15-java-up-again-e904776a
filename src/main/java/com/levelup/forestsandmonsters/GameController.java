@@ -41,6 +41,12 @@ public class GameController {
         // TODO: Should also update the game results?
     }
 
+    public void exitGame(String characterName) {
+    // TODO: Implement startGame - Should probably create tiles and put the character
+    // on them?
+    // TODO: Should also update the game results?
+    }
+
     public GameStatus getStatus() {
         return this.status;
     }

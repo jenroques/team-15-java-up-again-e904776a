@@ -5,11 +5,10 @@ I want to exit the game and receive information about game play including start 
 
 Scenario Outline:: Show user game stats 
 
-    Given player exits the game
-    When the final screen displays
-    Then the Game stats are displayed as <startingPositionX> , <startingPositionY> , <endingPositionX> , <endingPositionY> , <endingMoveCount>
+    When <characterName> exits the game
+    Then the Game stats for <characterName> are displayed as <startingPositionX> , <startingPositionY> , <endingPositionX> , <endingPositionY> , <endingMoveCount>
     Examples:
-        | startingPositionX | startingPositionY | endingPositionX | endingPositionY | endingMoveCount
-        | "0"               | "0"               |"5"              |"9"              | 79
-        | "0"               | "0"               |"8"              |"0"              | 286
+       characterName | startingPositionX | startingPositionY | endingPositionX | endingPositionY | endingMoveCount
+       "Brittany"    | "0"               | "0"               |"5"              |"9"              | 79
+        "Renee"      | "0"               | "0"               |"8"              |"0"              | 286
 
