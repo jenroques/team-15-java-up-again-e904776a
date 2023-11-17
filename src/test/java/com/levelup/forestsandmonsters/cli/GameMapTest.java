@@ -32,6 +32,7 @@ public class GameMapTest {
         Position actualPosition = gameMap.calculatePosition(startingPosition, DIRECTION.NORTH);
 
         assertEquals(expectedPosition.xCoordinates, actualPosition.xCoordinates, 0);
+        assertEquals(expectedPosition.yCoordinates, actualPosition.yCoordinates, 0);
     }
 
     @Test 
@@ -47,6 +48,7 @@ public class GameMapTest {
         Position actualPosition = gameMap.calculatePosition(startingPosition, DIRECTION.EAST);
 
         assertEquals(expectedPosition.xCoordinates, actualPosition.xCoordinates, 0);
+        assertEquals(expectedPosition.yCoordinates, actualPosition.yCoordinates, 0);
     }   
 
     @Test 
@@ -62,6 +64,7 @@ public class GameMapTest {
         Position actualPosition = gameMap.calculatePosition(startingPosition, DIRECTION.SOUTH);
 
         assertEquals(expectedPosition.xCoordinates, actualPosition.xCoordinates, 0);
+        assertEquals(expectedPosition.yCoordinates, actualPosition.yCoordinates, 0);
     }
 
     @Test 
@@ -77,6 +80,7 @@ public class GameMapTest {
         Position actualPosition = gameMap.calculatePosition(startingPosition, DIRECTION.WEST);
 
         assertEquals(expectedPosition.xCoordinates, actualPosition.xCoordinates, 0);
+        assertEquals(expectedPosition.yCoordinates, actualPosition.yCoordinates, 0);
     }
 }
 
