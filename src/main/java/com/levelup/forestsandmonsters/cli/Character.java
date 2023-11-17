@@ -6,6 +6,7 @@ public class Character {
 
     public String characterName;
     static final String DEFAULT_NAME = "Thor";
+    Point characterPosition = new Point(0,0);;
 
     public Character(String characterName) {
         this.characterName = characterName;
@@ -24,7 +25,8 @@ public class Character {
     }
 
     public Point getPosition() {
-        return null;
+         
+        return this.characterPosition;
     }
    
 }
