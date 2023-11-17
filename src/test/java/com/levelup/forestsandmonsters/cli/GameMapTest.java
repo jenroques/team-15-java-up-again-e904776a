@@ -2,6 +2,8 @@ package com.levelup.forestsandmonsters.cli;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -81,6 +83,28 @@ public class GameMapTest {
 
         assertEquals(expectedPosition.xCoordinates, actualPosition.xCoordinates, 0);
         assertEquals(expectedPosition.yCoordinates, actualPosition.yCoordinates, 0);
+    }
+
+    @Test
+    public void positionIsValid() {
+
+        Position validPosition = new Position();
+        validPosition.setCharacterPosition(5, 5);
+       
+        validPosition.isValid();
+
+       assertTrue(true); 
+    }
+
+    @Test
+    public void positionIsNoValid() {
+
+        Position invalidPosition = new Position();
+        invalidPosition.setCharacterPosition(11, 10);
+
+        invalidPosition.isValid();
+
+        assertFalse(false);
     }
 }
 
