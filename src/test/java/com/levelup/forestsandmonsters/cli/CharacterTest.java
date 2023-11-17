@@ -24,12 +24,15 @@ public class CharacterTest {
     }
 
      @Test
-    public void characterClassGetNameFunctionReturnsName() {
+    public void characterClassGetNameFunctionReturnsSetName() {
         Character character = new Character("Jenny");
         String actualName = character.getCharacterName();
         String expectedName = "Jenny";
-        assertEquals(expectedName, actualName);
+        assertEquals(expectedName, actualName);     
+    }
 
+    @Test
+    public void characterClassGetNameFunctionReturnsDefaultName() {
         Character character2 = new Character();
         String actualName2 = character2.getCharacterName();
         String expectedName2 = "Thor";
