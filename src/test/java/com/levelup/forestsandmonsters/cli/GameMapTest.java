@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import com.levelup.forestsandmonsters.GameController;
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 public class GameMapTest {
@@ -87,24 +88,30 @@ public class GameMapTest {
 
     @Test
     public void positionIsValid() {
-
-        Position validPosition = new Position();
-        validPosition.setCharacterPosition(5, 5);
+        GameMap gameMap = new GameMap();
+        Position startingPosition = new Position(5,5);
+        Position expectedCalculatedPosition = new Position(5, 6);
        
-        validPosition.isValid();
+        gameMap.calculatePosition(startingPosition, GameController.DIRECTION.NORTH);
+       
+        expectedCalculatedPosition.isValid();
 
-       assertTrue(validPosition.isValid()); 
+       assertTrue(expectedCalculatedPosition.isValid()); 
     }
 
-    @Test
+    @Test 
     public void positionIsNotValid() {
+        GameMap gameMap = new GameMap();
+        Position startingPosition = new Position(9, 9);
+        Position expectedCalculatedPosition = new Position(9, 10);
 
-        Position invalidPosition = new Position();
-        invalidPosition.setCharacterPosition(11, 10);
+        gameMap.calculatePosition(startingPosition, GameController.DIRECTION.NORTH);
 
-        invalidPosition.isValid();
+        expectedCalculatedPosition.isValid();
 
-        assertFalse(invalidPosition.isValid());
+        assertFalse(expectedCalculatedPosition.isValid());
     }
+
+
 }
 
