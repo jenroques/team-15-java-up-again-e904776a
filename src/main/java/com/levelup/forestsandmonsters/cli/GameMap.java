@@ -16,31 +16,35 @@ public class GameMap {
         return this.positions;
     }
 
+    public Boolean isPositionValid(Position coordinates) {
+        return coordinates.isValid();
+    }
+
     public Position calculatePosition(Position startingPosition, DIRECTION direction) {
         int x = startingPosition.xCoordinates;
         int y = startingPosition.yCoordinates;
 
-        // if(direction == DIRECTION.NORTH) {
-        //     startingPosition.setCharacterPosition(x, y + 1);
-        // }
+        Position newPosition = new Position(x, y);
+
         switch (direction) {
             case NORTH:
-                startingPosition.setCharacterPosition(x, y + 1);
+                newPosition.setCharacterPosition(x, y + 1);
                 break;
             case SOUTH:
-                startingPosition.setCharacterPosition(x, y - 1);
+                newPosition.setCharacterPosition(x, y - 1);
                 break;
             case WEST:
-                startingPosition.setCharacterPosition(x - 1, y);
+                newPosition.setCharacterPosition(x - 1, y);
                 break;
             case EAST:
-                startingPosition.setCharacterPosition(x + 1, y);
+                newPosition.setCharacterPosition(x + 1, y);
                 break;
             default:
                 break;
         }
         
-
-        return startingPosition;
+        return newPosition.isValid() ? newPosition : startingPosition;   
     }
+
+
 }
